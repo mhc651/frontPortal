@@ -1,0 +1,102 @@
+.register.viewAuditMaterials{
+  .registerWrap{
+    .registerInfo{
+      padding-left: 120px;
+    }
+  }
+  .status{
+    width: 1081px;
+    height: 50px;
+    font-size: 14px;
+    border: 1px solid #E4E7ED;
+    margin: 30px auto 0;
+    display: table;
+    div{
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 34px;
+      height: 100%;
+      &.ltPortion{
+        display: table-cell;
+        height: 100%;
+        width: 264px;
+        border-right: 1px solid #E4E7ED;
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .statusVal{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 13px;
+        color: #F56C6C;
+        word-break: break-all;
+      }
+      &.rtPortion{
+        display: table-cell;
+        width: 800px;
+        span{
+          vertical-align: middle;
+        }
+        .statusVal{
+          display: inline-block;
+          vertical-align: middle;
+          width: 85%;
+          margin-left: 13px;
+          color: #F56C6C;
+        }
+      }
+    }
+  }
+  .logTable{
+    width: 1081px;
+    margin: 30px auto 0;
+    .ivu-table th{
+      background: transparent;
+      color: #909399;
+      font-weight: normal;
+    }
+    tr{
+      height: 48px;
+      font-size: 14px;
+      td{
+        color: #373D41;
+      }
+    }
+  }
+  .tablePage{
+    width: 1081px;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .shadow{
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    &:hover div,&:hover .ivu-icon-eye {
+      display: block;
+    }
+    div{
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.7;
+    }
+    .ivu-icon-eye{
+      cursor: pointer;
+      display: none;
+      font-size: 24px;
+      position: absolute;
+      color: #fff;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      margin-top: -12px;
+      margin-left: -10px;
+    }
+  }
+}

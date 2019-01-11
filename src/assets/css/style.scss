@@ -1,0 +1,158 @@
+@import '~./_common';
+.clearfix:after {
+  content: '\200B';
+  display: block;
+  height: 0;
+  clear: both;
+}
+.clearfix {
+  *zoom: 1;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+a:not(:hover) {
+  color: inherit;
+}
+
+body {
+  font-family: 'PingFang SC', 'Lantinghei SC', 'Helvetica Neue', 'Helvetica',
+    'Arial', 'Microsoft YaHei', '微软雅黑', 'STHeitiSC-Light', 'simsun', '宋体',
+    'WenQuanYi' 'Zen' 'Hei', 'WenQuanYi' 'Micro Hei', 'sans-serif';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100% !important;
+}
+html,
+body {
+  height: 100%;
+  overflow: auto;
+  font-size: 14px !important;
+}
+/*text*/
+.text--b {
+  font-weight: bold;
+}
+.text--h1 {
+  font-size: 24px;
+}
+.text--center {
+  text-align: center;
+}
+/*container*/
+// 基础容器
+@include container-bs();
+//对齐弹性布局
+@include align-bs();
+.main--fluid {
+  padding-top: 80px;
+  margin-top: -80px;
+  padding-bottom: 125px;
+  margin-bottom: -125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: inherit;
+  position: relative;
+}
+.container {
+  max-width: 1200px;
+  width: 100%;
+}
+.ivu-input {
+  min-height: 40px;
+  height: 100%;
+}
+.container--fluid {
+  height: calc(100% - 141px);
+}
+/*other*/
+.text--dinmed {
+  font-family: 'dinmed';
+}
+.modal3 .ivu-input{width: 280px}
+.modal3 label.ivu-form-item-label{margin-right: 22px;  line-height: 40px;font-size: 14px;text-align: right;
+  color: #606266;
+  padding: 0;
+}
+.modal3{
+  .form---disabled{
+    pointer-events: none;
+  }
+}
+.modal3 .ivu-form-item-content {
+  margin-left: 0 !important;
+  display: inline-block;
+}
+.modal3 .ivu-checkbox-group{line-height: 40px}
+.basemat{
+  .publicInput{
+    .ivu-input-wrapper{
+      textarea{
+        height: 80px;
+      }
+
+    }
+  }
+}
+.basemat{
+  pointer-events: none;
+}
+.cont .ivu-input{width: 280px}
+.modal5{
+  .ivu-form-item-content,.ivu-form-item-label{font-size: 14px;height: 40px}
+  .ivu-input {
+    width: 280px;
+  }
+  .NumCode{
+    label{height: 40px;line-height: 22px;}
+  }
+  .from_codes{position: relative;left: 410px;top: -38px;width: 124px;height: 40px;cursor: pointer}
+  .rebindMstep1{
+    .ivu-form-item{margin-bottom: 14px}
+  }
+
+}
+@font-face {
+  font-family: 'dinmed'; /* din中粗 */
+  src: url('../fonts/DINCond-Medium.eot');
+  src: url('../fonts/DINCond-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DINCond-Medium.woff') format('woff'),
+    url('../fonts/DINCond-Medium.ttf') format('truetype'),
+    url('../fonts/DINCond-Medium.svg#basefont') format('svg');
+}
+
+
+
+
+.text--b{
+  font-weight: bold;
+}
+.text--h1{
+  font-size: 24px;
+}
+.text--center{
+  text-align: center;
+}
+.text--small{
+  font-size: 1rem
+}
+.text--ccc{
+  color: #81878E;
+}
+.text--red{
+  color: #F56C6C;
+}
+.text--blue{
+  color: #1686EA;
+}
+.text--grayt{
+  color:#B5BAC3
+}
+.text--gray{
+  color:#9EB5CA
+}
+.text--yellow{
+  color:#F4AC40
+}

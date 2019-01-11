@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--<base href="/portal">-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>厦门海西医药交易中心</title>
+</head>
+<style>
+  #browser {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 800px;
+    height: 500px;
+    margin: auto;
+    font-size: 16px;
+    padding-top: 50px;
+    border-color: #6fbace;
+    border-width: 10px;
+    border-top-width: 35px;
+    border-style: solid;
+    border-radius: 5px;
+  }
+
+  .browser_top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: -30px;
+    width: 100%;
+    color: #fff;
+  }
+
+  .browser_top a {
+    color: inherit;
+  }
+
+  .browser_title {
+    margin-bottom: 50px;
+  }
+
+  #browser p {
+    margin-top: 15px;
+  }
+
+  .browser_link a {
+    text-decoration: underline;
+    display: inline-block;
+    margin: 30px;
+  }
+
+  .browser--right {
+    float: right;
+  }
+
+  .browser_text--center {
+    text-align: center;
+  }
+
+  .browser_text--small {
+    font-size: 12px;
+    opacity: .8;
+  }
+</style>
+
+<body>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+  <!-- 浏览器提示 -->
+  <div id="browser">
+    <!-- 浏览器提示头 -->
+    <div class="browser_top">
+      <a class="browser--right">
+        ×
+      </a>
+      <span>
+        提示
+      </span>
+    </div>
+    <!-- 浏览器提示头 end-->
+
+    <!-- 提示内容 -->
+    <h1 class="browser_title browser_text--center">抱歉,您的浏览器版本过低</h1>
+    <p class="browser_text--center">为了您能够正常登录平台，建议您升级浏览器版本或者尝试其他的浏览器，点击可直接下载</p>
+    <p class="browser_text--center browser_text--small">提示：360安全浏览器、QQ浏览器等国内浏览器请在地址栏点击设置为极速模式</p>
+    <div class="browser_link  browser_text--center">
+      <a href="https://bucket-tools.oss-cn-beijing.aliyuncs.com/tools/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8%20-%20XP%E7%B3%BB%E7%BB%9F%E4%B8%93%E7%94%A8.exe"
+        download>谷歌浏览器XP 专用 </a>
+      <a href="https://bucket-tools.oss-cn-beijing.aliyuncs.com/tools/%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8Win7%E4%BB%A5%E4%B8%8A%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8_65.0.3325.181_Setup.exe"
+        download>谷歌浏览器WIN7</a>
+    </div>
+    <!-- 提示内容 end-->
+  </div>
+  <!-- 浏览器提示 end-->
+  <script>
+    // 兼容判断
+    function IEVersion() {
+      var userAgent = navigator.userAgent;
+      var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器
+      var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+      if (isIE) {
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        if (fIEVersion == 7) {
+          return 7;
+        } else if (fIEVersion == 8) {
+          return 8;
+        } else if (fIEVersion == 9) {
+          return 9;
+        } else if (fIEVersion == 10) {
+          return 10;
+        } else {
+          return 6;//IE版本<=7
+        }
+      } else if (isEdge) {
+        return 'edge';//edge
+      } else if (isIE11) {
+        return 11; //IE11
+      } else {
+        return -1;//不是ie浏览器
+      }
+    }
+    window.browser = IEVersion();
+    if (browser < 10 && browser != -1) {
+      browser = false
+      // 不支持系统
+      document.getElementById("browser").style.display = 'block';
+    } else {
+      browser = true;
+    }
+
+  </script>
+</body>
+
+</html>

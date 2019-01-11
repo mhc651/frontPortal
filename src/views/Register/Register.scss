@@ -1,0 +1,282 @@
+.register {
+  min-width: 1200px;
+  //  阻止操作
+  .form---disabled{
+    .ivu-icon.ivu-icon-trash-b{
+      display: none;
+    }
+    input{
+      pointer-events: none;
+      opacity: .8;
+    }
+  }
+  .register-to-login {
+    height: 40px;
+    line-height: 40px;
+    width: 1200px;
+    margin: 0 auto;
+    span {
+      float: right;
+    }
+    a {
+      float: right;
+      width: 80px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      border-radius: 12px;
+      margin-top: 8px;
+      border: 1px solid #1686EA;
+      margin-left: 15px;
+    }
+  }
+  .status{
+    width: 1081px;
+    height: 50px;
+    font-size: 14px;
+    border: 1px solid #E4E7ED;
+    margin: 30px auto 0;
+    display: table;
+    div{
+      display: table-cell;
+      vertical-align: middle;
+      padding-left: 34px;
+      height: 100%;
+      &.ltPortion{
+        display: table-cell;
+        height: 100%;
+        width: 264px;
+        border-right: 1px solid #E4E7ED;
+        span{
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      .statusVal{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 13px;
+        color: #F56C6C;
+        word-break: break-all;
+      }
+      &.rtPortion{
+        display: table-cell;
+        width: 800px;
+        span{
+          vertical-align: middle;
+        }
+        .statusVal{
+          display: inline-block;
+          vertical-align: middle;
+          width: 85%;
+          margin-left: 13px;
+          color: #F56C6C;
+        }
+      }
+    }
+  }
+}
+// 注册时
+.register-to-login~.registerWrap{
+  margin-top: 0;
+}
+.registerWrap {
+  overflow: hidden;
+  width: 1200px;
+  margin: 40px auto;
+  background: #fff;
+  .register-state{
+   // 审核状态
+   width: 1081px;
+   //border: 1px solid rgb(228, 231, 237);
+   //margin-top: 15px;
+   //margin-left: 4.33rem;
+   font-size: 1.17rem;
+   height: 50px;
+    //margin-bottom: 15px;
+    margin: 15px auto;
+   span{
+     padding-left: 1.08rem;
+   }
+  }
+  .line{
+    border-top: 1px dashed  #E4E7ED;
+    margin-top: 32px;
+  }
+  .errRemind{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: red;
+  }
+  .registerBtn{
+    display: block;
+    width: 400px;
+    height: 60px;
+    font-size: 16px;
+    margin: 0 auto 30px;
+    color: #fff;
+    background: #1686EA;
+    box-shadow: none;
+  }
+}
+
+.registerInfo {
+  padding-left: 110px;
+  margin-top: 30px;
+}
+
+.imgUpload {
+
+  .imgWrap {
+    display: inline-block;
+    width: 408px;
+    vertical-align: text-top;
+    .imgWrapItem {
+      float: left;
+      margin-bottom: 20px;
+      margin-right: 12px;
+      &:nth-child(3n){
+        margin-right: 0;
+      }
+    }
+    .imgItem{
+      width: 128px;
+      float: left;
+      margin-right: 12px;
+      margin-bottom: 20px;
+      &:nth-child(3n){
+        margin-right: 0;
+      }
+      img{
+        display: block;
+        width: 128px;
+        height: 128px;
+        border-radius: 6px;
+        border: 1px solid #DCDFE6;
+      }
+      p{
+        font-size: 14px;
+        color: #373D41;
+        margin-top: 10px;
+        text-align: center
+      }
+    }
+  }
+  label {
+    display: inline-block;
+    vertical-align: text-top;
+    font-size: 14px;
+    margin-right: 22px;
+    &.leftName {
+      text-align: right;
+      color: #606266;
+      padding-top: 10px;
+      span {
+        color: red;
+        margin-right: 2px;
+      }
+    }
+    &.rightTip {
+      display: inline-block;
+      margin-left: 11px;
+      p {
+        width: 300px;
+        color: #909399;
+      }
+    }
+  }
+}
+
+.verificationCode {
+
+  align-items: center;
+  .NumCode {
+    display: inline-block;
+    vertical-align: top;
+    width: 408px;
+    .ivu-input-wrapper{
+      width: 245px;
+    }
+    .ivu-form-item-content{
+      display: inline-block;
+    }
+    .ivu-input {
+      display: inline-block;
+      width: 245px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 14px;
+      color: #303133;
+      border: 1px solid #DCDFE6;
+      border-radius: 6px;
+      box-shadow: none;
+      &:focus {
+        border-color: #1686EA;
+      }
+    }
+    button {
+      float: right;
+      width: 153px;
+      height: 40px;
+      font-size: 14px;
+      color: #fff;
+      background: #1686EA;
+      border: none;
+      border-radius: 6px;
+      box-shadow: none;
+      &[disabled]{
+        background: #C0C7CD;
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+  label {
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 22px;
+    line-height: 20px;
+    &.leftName {
+      width: 224px;
+      text-align: right;
+      color: #606266;
+      span {
+        color: red;
+        margin-right: 2px;
+      }
+    }
+    &.rightTip {
+      margin-left: 11px;
+      line-height: 20px;
+      width: 300px;
+      color: #909399;
+    }
+  }
+  .agreement {
+    display: inline-block;
+    width: 408px;
+    .checkbox {
+      margin-right: 0;
+      .ivu-checkbox-inner,ivu-checkbox-input {
+        font-size: 14px;
+        color: #373D41;
+        margin-right: 22px;
+      }
+    }
+    .article{
+      display: inline-block;
+      font-size: 14px;
+      color:#1686EA
+    }
+  }
+}
+.register-model .ivu-btn-text {
+  display: none;
+}
+
+.auditDesc{width: 780px;height: 50px;border: 1px solid #e4e7ed;display: inline-block;line-height: 50px;border-left: none;margin-left: -5px}
+.stateDiv{width: 300px;height: 50px;display: inline-block;line-height: 50px;border: 1px solid #e4e7ed;}
+.fleft{float: left}

@@ -1,0 +1,17 @@
+.container {
+  padding-top: 30px;
+  .title {
+    color: #373D41;
+    font-size: 24px;
+    border-left: 4px solid #1686EA;
+    padding-left: 44px;
+  }
+  width: 1200px;
+  margin: 40px auto;
+  background-color: #fff;
+  border: 1px solid #E4E9EE;
+  .content {
+    padding: 14px 60px 10px;
+    overflow: hidden;
+  }
+}

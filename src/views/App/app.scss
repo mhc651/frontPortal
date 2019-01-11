@@ -1,0 +1,203 @@
+$color: rgb(22, 134, 234);
+
+
+.portal {
+   margin: 15px 0;
+  .container {
+    position: relative;
+    background: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    min-width: 1200px;
+  }
+  //上下左右居中用
+  .hmid{ position: absolute;top: 48%;left: 50%; transform: translateY(-50%) translateX(-50%);}
+  .app-cell_img img {
+    width: 4.33rem;
+  }
+  // 标题
+  .app-head {
+    position: relative;
+    padding-left: 3.67rem;
+    font-size: 24px;
+    border-bottom: 1px dashed #E4E7ED;
+    padding-bottom: 25px;
+    //line-height: ;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 5px;
+      height: 40%;
+      background: $color;
+    }
+    span {
+      padding-left: 2.17rem;
+      font-size: 14px;color: #909399;
+      float: right;
+      margin-right: 50px;
+    }
+  }
+  .app-list {
+    padding: 1rem 50px 0 33px;
+    width: 100%;
+  }
+  .app-cell {
+    //margin-bottom: 5px;
+    //padding: 2rem 2rem 0;
+    //.app-cell_con:hover{
+    //  margin-top: 0;
+    //}
+    .app-cell_con {
+      margin: 15px 0px 0px 19px;
+      width: 260px;
+      position: relative;
+      padding: 34px 22px 34px 22px;
+      border-radius: 5px;
+      border: 1px solid rgb(228, 233, 238);
+      text-align: center;
+      > *:not(.app-cell_remark) {
+        //margin-bottom: 1rem;
+      }
+      .app-cell_remark {
+        height: 2.63rem;
+        overflow: hidden;
+        margin-bottom: 15px;
+      }
+      .btn {
+        border-radius: 50px;
+        border: 2px solid rgb(22, 134, 234);
+        width: 14rem;
+        height: 3.67rem;
+        line-height: 3.67rem;
+        padding-left: 1.83rem;
+        padding-right: 1.83rem;
+        margin-left: 5px;
+        font-size: 16px;
+        font-weight: bold;
+        .btn_icon {
+          font-size: 120%;
+          float: right;
+          line-height:3.4rem
+        }
+      }
+      .defaultbc{border: 2px solid #E4E7ED;color:#606266}
+      //.auditbc{border: 2px solid #F4AC40;color:#F4AC40}
+
+      .unopenbc:hover{color:#6C7A87; border:2px solid #8DA2B5}
+
+      .auditbc:hover{color:#606266; border:2px solid #B5BAC3}
+
+      .inreviewbc:hover{color:#FFBA53; border:2px solid #FFBA53}
+
+      .uppassbc,.inreviewbc,.auditbc,.unopenbc{border: 2px solid #E4E7ED;color:#606266}
+      .uppassbc:hover{color:#F56C6C; border:2px solid #F56C6C}
+
+    }
+  }
+  .kto {
+    height: 50px;
+    margin: 0 3.67rem;
+    border-bottom: 1px solid #E4E7ED;
+
+    line-height: 50px;
+  }
+  .circle{width: 1rem;height: 1rem;border: 3px solid #1686EA;border-radius: 10px;float:left;margin: 19px 10px;}
+  .col--4 {
+    -webkit-box-flex: 25%;
+    -ms-flex: 25%;
+    flex: 25%;
+    max-width: 25%;
+  }
+  .fontsst{font-size: 55px}
+  .jbiaonoopen{
+    float: right;
+    margin: -42px 0px -60px 0;
+    color:#8DA2B5
+  }
+  .jbiaoaudit{
+    float: right;
+    margin: -42px 0px -60px 0;
+    color:#F4AC40
+  }
+  .noopen,.audit{display: inline-block;width: 20px;font-size: 14px;margin-left: -45px;color: #ffffff;position: relative;top: -4px}
+  .jbiaodue{
+    float: right;
+    margin: -42px 0px -60px 0;
+    color:#3FD0F4
+  }
+  .arrow-up {
+    display: inline-block;
+    vertical-align: top;
+    border-bottom: 10px solid #ffffff;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    content: "";
+    margin-top: 12px;
+  }
+  .tipo{right: 20px;position: absolute;z-index: 100; top: 0}
+  .tipdueo{
+    background-color: #3FD0F4;
+    width: 30px;
+    float:right;
+  }
+  .due{display: inline-block;width: 20px;font-size: 14px;color: #ffffff;position: relative}
+  .app-cell{height: 245px}
+  .app-cell:hover{
+    .app-cell_con{
+      margin-top: 5px;
+      transition: all 0.8s;
+      box-shadow: 0  5px 15px #E4E9EE;
+      .app-cell_remark{
+        height: 4.2rem;
+        margin-bottom: 0px;
+      }
+
+    }
+    .h2h{
+      color: #0077FF;
+    }
+  }
+  .rgo{color:#1686EA}
+  .rgo:hover{background-color: #1686EA;color: #ffffff}
+  .tipunopen{
+    background-color: #8DA2B5;
+    width: 30px;
+    float:right;
+  }
+  .tipaudit{
+    background-color: #B5BAC3;
+    width: 30px;
+    float:right;
+  }
+  .tipinreview{
+    background-color: #FFBA53;
+    width: 30px;
+    float:right;
+  }
+  .tipunpass{
+    background-color: #F56C6C;
+    width: 30px;
+    float:right;
+  }
+
+
+}
+@media (max-width: 1380px) {
+  .portal {
+    .container {
+      width: calc(100% - 180px);
+    }
+  }
+}
+.h2h{height: 20px;font-size: 18px;color: #303133;margin-bottom: 15px}
+.haveOpen{font-size: 18px;font-weight: bold}
+.main--fluids {
+  min-height: calc(100% - 170px);
+}
+.iconsty{font-size: 28px;text-align: left;margin: -33px 0 -20px -15px;}
+.coupoint{cursor: pointer}
+.blues{color:#0077FF}
+.hse{color:#606266}
+
