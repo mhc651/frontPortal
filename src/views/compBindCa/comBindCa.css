@@ -1,0 +1,12 @@
+.cbco {
+  .unedit {
+    input{pointer-events: none;}
+  }
+}
+@media screen and (max-height: 768px) {
+  .cbco {
+    .mb14.ivu-form-item{
+      margin-bottom: 14px;
+    }
+  }
+}
